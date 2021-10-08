@@ -98,7 +98,6 @@ router.get("/clientesMes/:ano",async (req,res,next)=>{
     WHERE DATE_PART('year',cliente_datacadastrado) = ${ano}
     GROUP BY DATE_PART('month',cliente_datacadastrado)
     ORDER BY mes_numero`
-    
     )
  
     res.status(200).send({

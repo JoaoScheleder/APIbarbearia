@@ -14,8 +14,13 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 const rotaClientes = require('./routes/clientes');
+const rotaProdutos = require('./routes/produtos');
+
+
 
 app.use('/clientes', rotaClientes);
+app.use('/produtos', rotaProdutos);
+
 
 //teste pra ver se esta tudo funcionando
 app.use("/teste",(req,res,next)=>{
